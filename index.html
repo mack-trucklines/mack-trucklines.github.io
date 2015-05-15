@@ -198,10 +198,11 @@
       text-align: center;
     }
 
-    .back {
+    .contact {
       position: absolute;
       top: 0;
       left: 0;
+      cursor: pointer;
       text-align: center;
       display: block;
       padding: 7px;
@@ -244,6 +245,11 @@
       z-index: 1;
     }
 
+    .main section.page1 > img {
+      top: 20%;
+      right: 5%;
+    }
+
     .main section.page1 {
       background:rgb(230, 217, 200);
     }
@@ -270,7 +276,7 @@
       text-align: center;
     }
     .main section.page2 {
-      background: #555557 url(back-phone.png) no-repeat center -150px ;
+      background: #555557 url(truck4.png) no-repeat center -150px ;
     }
     .main section.page2 > img {
       position: absolute;
@@ -301,7 +307,7 @@
       color: #FFF;
       }
     .main section.page3 {
-      background:url(tilted-phone.png) no-repeat 156px -150px ;
+      background:url(truck5.png) no-repeat -156px 150px ;
     }
     .main section.page3 .page_container {
       overflow: hidden;
@@ -322,6 +328,9 @@
       line-height: 160%;
       font-weight: 100;
       font-size: 21px;
+    }
+    .main section.page3 a {
+      color: #000;
     }
 
     body.disabled-onepage-scroll .onepage-wrapper  section {
@@ -393,7 +402,7 @@
           <div class="btns">
   	      </div>
   	    </div>
-  	    <img src="phones.png" alt="phones">
+  	    <img src="truck1.png" alt="phones">
       </section>
 
 	    <section class="page2">
@@ -421,11 +430,17 @@
 	      <div class="page_container">
           <h1>Contact</h1>
           <h2>Mobile: <b>+1-530-777-8217</b></h2>
-          <h2>Email: <b>rajveer2639@gmail.com</b></h2>
+          <h2 title="Click to mail">Email: <b><a href="mailto:rajveer2639@gmail.com">rajveer2639@gmail.com</a></b></h2>
   	    </div>
       </section>
     </div>
-    <a class="back" href="mailto:rajveer2639@gmail.com">Contact Us</a>
+    <div class="contact">Contact Us</div>
   </div>
+  <script>
+      $(".contact").click(function () {
+        console.log("hi");
+        $(".main").moveTo(3);
+      });
+  </script>
 </body>
 </html>
